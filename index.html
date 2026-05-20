@@ -1,0 +1,2264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="B3 Construction Company Ltd delivers sustainable construction, civil engineering, estate development, infrastructure, and facility management solutions in Nigeria."
+    />
+    <title>B3 Construction Company Ltd | Engineering, Infrastructure & Estate Development</title>
+    <link rel="icon" href="company-logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <style>
+      :root {
+        --primary-900: #1f1f47;
+        --primary-800: #2e2e63;
+        --primary-700: #3c3c7d;
+        --secondary-900: #7a682b;
+        --secondary-800: #9c843b;
+        --neutral-950: #0b0b0c;
+        --neutral-900: #111214;
+        --neutral-800: #1a1b1f;
+        --neutral-700: #2b2d33;
+        --neutral-600: #5b606b;
+        --neutral-500: #7c818d;
+        --neutral-300: #c8ccd3;
+        --neutral-200: #e3e5e8;
+        --neutral-100: #f4f5f7;
+        --neutral-50: #fafafb;
+        --white: #ffffff;
+        --success: #1d7a46;
+        --warning: #c98900;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+        --container: min(100% - 32px, 1200px);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 92px;
+      }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--neutral-50);
+        color: var(--neutral-900);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.7;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body.nav-open,
+      body.lightbox-open {
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      ::selection {
+        background: var(--primary-800);
+        color: var(--white);
+      }
+
+      .skip-link {
+        position: fixed;
+        left: 16px;
+        top: 16px;
+        z-index: 200;
+        transform: translateY(-140%);
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--primary-900);
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 700;
+        box-shadow: var(--shadow-md);
+        transition: transform 180ms var(--ease);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--secondary-800);
+        outline-offset: 4px;
+      }
+
+      .container {
+        width: var(--container);
+        margin-inline: auto;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section-tight {
+        padding: 64px 0;
+      }
+
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--secondary-900);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      .section-label::before {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: currentColor;
+      }
+
+      .section-heading {
+        max-width: 780px;
+        margin: 16px 0 0;
+        color: var(--neutral-900);
+        font-size: clamp(2.25rem, 6vw, 3.75rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      .section-copy {
+        max-width: 650px;
+        margin: 20px 0 0;
+        color: var(--neutral-600);
+        font-size: clamp(1rem, 2vw, 1.125rem);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 0 22px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        transition:
+          background-color 180ms var(--ease),
+          border-color 180ms var(--ease),
+          color 180ms var(--ease),
+          transform 180ms var(--ease);
+        white-space: nowrap;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: var(--primary-800);
+        color: var(--white);
+      }
+
+      .button-primary:hover {
+        background: var(--primary-900);
+      }
+
+      .button-secondary {
+        border-color: var(--primary-800);
+        background: transparent;
+        color: var(--primary-800);
+      }
+
+      .button-secondary:hover {
+        background: var(--primary-800);
+        color: var(--white);
+      }
+
+      .button-accent {
+        background: var(--secondary-800);
+        color: var(--white);
+      }
+
+      .button-accent:hover {
+        background: var(--secondary-900);
+      }
+
+      .button-ghost {
+        border-color: rgba(255, 255, 255, 0.34);
+        background: rgba(11, 11, 12, 0.42);
+        color: var(--white);
+      }
+
+      .button-ghost:hover {
+        border-color: var(--white);
+        background: var(--white);
+        color: var(--primary-900);
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        color: var(--white);
+        transition:
+          background-color 220ms var(--ease),
+          border-color 220ms var(--ease),
+          color 220ms var(--ease),
+          box-shadow 220ms var(--ease);
+      }
+
+      .site-header.is-scrolled {
+        border-color: var(--neutral-200);
+        background: rgba(250, 250, 251, 0.96);
+        color: var(--neutral-900);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .nav-shell {
+        display: flex;
+        height: 76px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        font-weight: 700;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 4px;
+        background: var(--primary-800);
+        object-fit: cover;
+      }
+
+      .site-header.is-scrolled .brand-mark {
+        border-color: var(--neutral-200);
+      }
+
+      .brand-text {
+        display: grid;
+        gap: 1px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+      }
+
+      .brand-discipline {
+        color: currentColor;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.3;
+        opacity: 0.72;
+        text-transform: uppercase;
+      }
+
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .desktop-nav a {
+        position: relative;
+        border-radius: 4px;
+        padding: 10px 9px;
+        color: currentColor;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        opacity: 0.82;
+        transition:
+          opacity 160ms var(--ease),
+          background-color 160ms var(--ease);
+      }
+
+      .desktop-nav a:hover,
+      .desktop-nav a.is-active {
+        background: rgba(156, 132, 59, 0.14);
+        opacity: 1;
+      }
+
+      .nav-actions {
+        display: none;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .nav-actions .button {
+        min-height: 42px;
+        padding-inline: 16px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 4px;
+        background: rgba(11, 11, 12, 0.16);
+        color: currentColor;
+      }
+
+      .site-header.is-scrolled .menu-toggle {
+        border-color: var(--neutral-200);
+        background: var(--white);
+      }
+
+      .mobile-drawer {
+        position: fixed;
+        inset: 0;
+        z-index: 150;
+        display: none;
+      }
+
+      .mobile-drawer.is-open {
+        display: block;
+      }
+
+      .drawer-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(11, 11, 12, 0.72);
+      }
+
+      .drawer-panel {
+        position: absolute;
+        inset: 0 0 0 auto;
+        display: flex;
+        width: min(88vw, 390px);
+        flex-direction: column;
+        background: var(--neutral-50);
+        color: var(--neutral-900);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .drawer-head {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--neutral-200);
+        padding: 0 20px;
+      }
+
+      .drawer-close {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--neutral-200);
+        border-radius: 4px;
+        background: var(--white);
+      }
+
+      .drawer-links {
+        display: grid;
+        padding: 16px 20px 24px;
+      }
+
+      .drawer-links a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--neutral-200);
+        padding: 18px 0;
+        color: var(--neutral-900);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .drawer-contact {
+        margin-top: auto;
+        border-top: 1px solid var(--neutral-200);
+        padding: 20px;
+      }
+
+      .drawer-contact p {
+        margin: 0 0 14px;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        min-height: 88vh;
+        align-items: end;
+        isolation: isolate;
+        overflow: hidden;
+        background: var(--neutral-900);
+        color: var(--white);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background-image: url("assets/project-10.jpeg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(11, 11, 12, 0.66);
+      }
+
+      .hero-inner {
+        display: grid;
+        gap: 34px;
+        padding: 132px 0 48px;
+      }
+
+      .hero-title {
+        max-width: 960px;
+        margin: 0;
+        font-size: clamp(3rem, 12vw, 5.9rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 0.97;
+      }
+
+      .hero-body {
+        display: grid;
+        max-width: 930px;
+        gap: 24px;
+      }
+
+      .hero-body p {
+        max-width: 710px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: clamp(1.0625rem, 2vw, 1.35rem);
+        line-height: 1.65;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .about-layout {
+        display: grid;
+        gap: 48px;
+      }
+
+      .about-panel {
+        display: grid;
+        gap: 20px;
+      }
+
+      .about-lead {
+        margin: 0;
+        color: var(--neutral-900);
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .about-panel p {
+        margin: 0;
+        color: var(--neutral-600);
+      }
+
+      .principles {
+        display: grid;
+        gap: 1px;
+        background: var(--neutral-200);
+        border: 1px solid var(--neutral-200);
+      }
+
+      .principle {
+        display: grid;
+        gap: 14px;
+        background: var(--white);
+        padding: 24px;
+      }
+
+      .principle .icon-wrap {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(156, 132, 59, 0.28);
+        border-radius: 4px;
+        color: var(--secondary-800);
+      }
+
+      .principle h3 {
+        margin: 0;
+        color: var(--neutral-900);
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .principle p {
+        margin: 0;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .featured {
+        background: var(--neutral-900);
+        color: var(--white);
+      }
+
+      .featured .section-heading,
+      .featured .section-copy {
+        color: var(--white);
+      }
+
+      .featured .section-copy {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .featured-grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 44px;
+      }
+
+      .featured-card {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--neutral-800);
+        isolation: isolate;
+      }
+
+      .featured-card img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 500ms var(--ease);
+      }
+
+      .featured-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(11, 11, 12, 0.46);
+        transition: background-color 250ms var(--ease);
+      }
+
+      .featured-card:hover img {
+        transform: scale(1.035);
+      }
+
+      .featured-card:hover::after {
+        background: rgba(11, 11, 12, 0.58);
+      }
+
+      .featured-content {
+        display: grid;
+        min-height: inherit;
+        align-content: end;
+        gap: 14px;
+        padding: 24px;
+      }
+
+      .project-tag {
+        width: max-content;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 999px;
+        padding: 7px 11px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .featured-content h3 {
+        max-width: 460px;
+        margin: 0;
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        font-weight: 700;
+        line-height: 1.08;
+      }
+
+      .featured-content p {
+        max-width: 520px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .services-head {
+        display: grid;
+        gap: 24px;
+        align-items: end;
+      }
+
+      .services-grid {
+        display: grid;
+        gap: 1px;
+        margin-top: 44px;
+        background: var(--neutral-200);
+        border: 1px solid var(--neutral-200);
+      }
+
+      .service-card {
+        display: grid;
+        min-height: 230px;
+        align-content: space-between;
+        gap: 24px;
+        background: var(--white);
+        padding: 24px;
+        transition:
+          background-color 180ms var(--ease),
+          transform 180ms var(--ease);
+      }
+
+      .service-card:hover {
+        background: #fbfaf7;
+        transform: translateY(-2px);
+      }
+
+      .service-number {
+        color: var(--secondary-800);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .service-card h3 {
+        margin: 0;
+        color: var(--neutral-900);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .service-card p {
+        margin: 12px 0 0;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .service-card footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--primary-800);
+      }
+
+      .why {
+        background: var(--white);
+      }
+
+      .why-layout {
+        display: grid;
+        gap: 42px;
+      }
+
+      .why-list {
+        display: grid;
+        gap: 1px;
+        background: var(--neutral-200);
+        border: 1px solid var(--neutral-200);
+      }
+
+      .why-row {
+        display: grid;
+        gap: 14px;
+        background: var(--white);
+        padding: 22px;
+      }
+
+      .why-row h3 {
+        margin: 0;
+        color: var(--neutral-900);
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .why-row p {
+        margin: 0;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .resource-board {
+        display: grid;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: var(--primary-900);
+        color: var(--white);
+      }
+
+      .resource-copy {
+        display: grid;
+        gap: 22px;
+        padding: 32px 24px;
+      }
+
+      .resource-copy h2 {
+        margin: 0;
+        max-width: 620px;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 700;
+        line-height: 1.08;
+      }
+
+      .resource-copy p {
+        margin: 0;
+        max-width: 660px;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .equipment-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.14);
+      }
+
+      .equipment-item {
+        display: flex;
+        min-height: 64px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        background: var(--primary-900);
+        padding: 16px 20px;
+      }
+
+      .equipment-item span:first-child {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .equipment-item span:last-child {
+        border: 1px solid rgba(208, 183, 101, 0.42);
+        border-radius: 999px;
+        padding: 6px 9px;
+        color: #d0b765;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .gallery-head {
+        display: grid;
+        gap: 26px;
+        align-items: end;
+      }
+
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .filter-button {
+        min-height: 42px;
+        border: 1px solid var(--neutral-200);
+        border-radius: 999px;
+        background: var(--white);
+        color: var(--neutral-700);
+        padding: 0 16px;
+        font-size: 13px;
+        font-weight: 700;
+        transition:
+          background-color 180ms var(--ease),
+          border-color 180ms var(--ease),
+          color 180ms var(--ease);
+      }
+
+      .filter-button:hover,
+      .filter-button.is-active {
+        border-color: var(--primary-800);
+        background: var(--primary-800);
+        color: var(--white);
+      }
+
+      .masonry {
+        column-count: 1;
+        column-gap: 18px;
+        margin-top: 42px;
+      }
+
+      .gallery-card {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 18px;
+        overflow: hidden;
+        border: 0;
+        border-radius: 8px;
+        background: var(--neutral-800);
+        box-shadow: var(--shadow-sm);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .gallery-card[hidden] {
+        display: none;
+      }
+
+      .gallery-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        transition:
+          transform 450ms var(--ease),
+          filter 250ms var(--ease);
+      }
+
+      .gallery-card:hover img,
+      .gallery-card:focus-visible img {
+        transform: scale(1.04);
+        filter: saturate(0.92);
+      }
+
+      .gallery-caption {
+        position: absolute;
+        inset: auto 0 0;
+        display: grid;
+        gap: 6px;
+        background: rgba(11, 11, 12, 0.82);
+        color: var(--white);
+        padding: 18px;
+        transform: translateY(0);
+      }
+
+      .gallery-caption span {
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .gallery-caption strong {
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      .hse {
+        background: var(--white);
+      }
+
+      .hse-grid {
+        display: grid;
+        gap: 28px;
+        margin-top: 44px;
+      }
+
+      .hse-panel {
+        display: grid;
+        gap: 22px;
+        border: 1px solid var(--neutral-200);
+        background: var(--neutral-50);
+        padding: 24px;
+      }
+
+      .hse-panel h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .hse-panel p {
+        margin: 0;
+        color: var(--neutral-600);
+      }
+
+      .hse-points {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hse-points li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--neutral-700);
+        font-size: 14px;
+      }
+
+      .hse-points i {
+        flex: 0 0 auto;
+        margin-top: 3px;
+        color: var(--success);
+      }
+
+      .process {
+        background: #f1f2f4;
+      }
+
+      .process-list {
+        display: grid;
+        gap: 1px;
+        margin-top: 44px;
+        background: var(--neutral-300);
+        border: 1px solid var(--neutral-300);
+      }
+
+      .process-step {
+        display: grid;
+        gap: 18px;
+        background: var(--neutral-50);
+        padding: 24px;
+      }
+
+      .process-step .step-index {
+        color: var(--secondary-800);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .process-step h3 {
+        margin: 0;
+        color: var(--neutral-900);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .process-step p {
+        margin: 0;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .cta-band {
+        background: var(--primary-800);
+        color: var(--white);
+      }
+
+      .cta-layout {
+        display: grid;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .cta-layout h2 {
+        margin: 0;
+        max-width: 770px;
+        font-size: clamp(2.1rem, 6vw, 4.25rem);
+        font-weight: 700;
+        line-height: 1.03;
+      }
+
+      .cta-layout p {
+        margin: 0;
+        max-width: 610px;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .contact {
+        background: var(--white);
+      }
+
+      .contact-layout {
+        display: grid;
+        gap: 42px;
+        align-items: start;
+      }
+
+      .contact-card {
+        border: 1px solid var(--neutral-200);
+        background: var(--white);
+        padding: 24px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field label {
+        color: var(--neutral-900);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--neutral-300);
+        border-radius: 4px;
+        background: var(--neutral-50);
+        color: var(--neutral-900);
+        padding: 0 16px;
+        transition:
+          border-color 160ms var(--ease),
+          background-color 160ms var(--ease);
+      }
+
+      .field input,
+      .field select {
+        min-height: 56px;
+      }
+
+      .field textarea {
+        min-height: 136px;
+        padding-top: 14px;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        border-color: var(--primary-800);
+        background: var(--white);
+        outline: none;
+      }
+
+      .form-message {
+        min-height: 22px;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .form-message.is-error {
+        color: #b42318;
+      }
+
+      .contact-details {
+        display: grid;
+        gap: 18px;
+      }
+
+      .detail-row {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        align-items: start;
+        border-bottom: 1px solid var(--neutral-200);
+        padding-bottom: 18px;
+      }
+
+      .detail-icon {
+        display: inline-flex;
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(46, 46, 99, 0.18);
+        border-radius: 4px;
+        color: var(--primary-800);
+      }
+
+      .detail-row h3 {
+        margin: 0 0 4px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .detail-row p,
+      .detail-row a {
+        margin: 0;
+        color: var(--neutral-600);
+        font-size: 14px;
+      }
+
+      .site-footer {
+        background: var(--neutral-950);
+        color: var(--white);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 36px;
+        padding: 56px 0 34px;
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: 18px;
+      }
+
+      .footer-brand img {
+        width: 54px;
+        height: 54px;
+        border-radius: 4px;
+      }
+
+      .footer-brand p {
+        max-width: 480px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .footer-col h3 {
+        margin: 0 0 14px;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-col a,
+      .footer-col p {
+        display: block;
+        margin: 0 0 9px;
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 14px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 18px 0 24px;
+        color: rgba(255, 255, 255, 0.54);
+        font-size: 13px;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 180;
+        display: none;
+        background: rgba(11, 11, 12, 0.94);
+        color: var(--white);
+      }
+
+      .lightbox.is-open {
+        display: grid;
+      }
+
+      .lightbox-shell {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+        padding: 18px;
+      }
+
+      .lightbox-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .lightbox-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .lightbox-close,
+      .lightbox-nav {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--white);
+      }
+
+      .lightbox-main {
+        display: grid;
+        grid-template-columns: 44px 1fr 44px;
+        gap: 12px;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .lightbox-image {
+        max-height: 72vh;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .lightbox-meta {
+        display: grid;
+        gap: 6px;
+        max-width: 860px;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .lightbox-meta h3 {
+        margin: 0;
+        font-size: clamp(1.35rem, 4vw, 2.2rem);
+        font-weight: 700;
+        line-height: 1.18;
+      }
+
+      .lightbox-meta p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 500ms var(--ease),
+          transform 500ms var(--ease);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (min-width: 640px) {
+        :root {
+          --container: min(100% - 48px, 1200px);
+        }
+
+        .principles,
+        .services-grid,
+        .process-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .equipment-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .masonry {
+          column-count: 2;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .section {
+          padding: 112px 0;
+        }
+
+        .desktop-nav,
+        .nav-actions {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .hero-inner {
+          padding-bottom: 60px;
+        }
+
+        .hero-body {
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: end;
+        }
+
+        .about-layout,
+        .why-layout,
+        .hse-grid,
+        .contact-layout {
+          grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        }
+
+        .featured-grid {
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+        }
+
+        .featured-card:first-child {
+          min-height: 600px;
+          grid-row: span 2;
+        }
+
+        .featured-card {
+          min-height: 290px;
+        }
+
+        .services-head,
+        .gallery-head,
+        .cta-layout {
+          grid-template-columns: 1fr auto;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        .service-card {
+          min-height: 285px;
+        }
+
+        .resource-board {
+          grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+        }
+
+        .resource-copy {
+          padding: 48px;
+        }
+
+        .equipment-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .masonry {
+          column-count: 3;
+        }
+
+        .process-list {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+          grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 0.55fr));
+        }
+      }
+
+      @media (min-width: 1180px) {
+        .desktop-nav a {
+          padding-inline: 12px;
+          font-size: 13px;
+        }
+
+        .masonry {
+          column-count: 4;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .button {
+          width: 100%;
+        }
+
+        .hero-actions {
+          width: 100%;
+        }
+
+        .brand-name {
+          max-width: 178px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .section {
+          padding: 72px 0;
+        }
+
+        .lightbox-main {
+          grid-template-columns: 1fr;
+        }
+
+        .lightbox-nav {
+          position: fixed;
+          bottom: 20px;
+          z-index: 2;
+        }
+
+        .lightbox-nav.prev {
+          left: 18px;
+        }
+
+        .lightbox-nav.next {
+          right: 18px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="B3 Construction Company Ltd home">
+          <img class="brand-mark" src="assets/company-logo.png" alt="B3 Construction Company Ltd logo" width="480" height="480" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#equipment">Resources</a>
+          <a href="#hse">HSE</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="button button-accent" href="https://wa.me/2348034073203">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            Get Quote
+          </a>
+        </div>
+
+        <button class="menu-toggle" type="button" data-menu-open aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-drawer" data-drawer aria-hidden="true">
+      <div class="drawer-backdrop" data-menu-close></div>
+      <aside class="drawer-panel" aria-label="Mobile navigation">
+        <div class="drawer-head">
+          <a class="brand" href="#home" data-drawer-link>
+            <img class="brand-mark" src="assets/company-logo.png" alt="B3 Construction Company Ltd logo" width="480" height="480" />
+            <span class="brand-text">
+              <span class="brand-name">B3 Construction</span>
+              <span class="brand-discipline">Nigeria</span>
+            </span>
+          </a>
+          <button class="drawer-close" type="button" data-menu-close aria-label="Close menu">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <nav class="drawer-links" aria-label="Mobile primary navigation">
+          <a href="#about" data-drawer-link>About <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#services" data-drawer-link>Services <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#projects" data-drawer-link>Projects <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#equipment" data-drawer-link>Equipment <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#hse" data-drawer-link>HSE & QA <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a href="#contact" data-drawer-link>Contact <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </nav>
+        <div class="drawer-contact">
+          <p>Speak directly with B3 Construction about project scope, site readiness, or estate infrastructure delivery.</p>
+          <a class="button button-primary" href="https://wa.me/2348034073203">WhatsApp B3 Construction</a>
+        </div>
+      </aside>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <h1 class="hero-title reveal" id="hero-title">B3 Construction Company Ltd</h1>
+          <div class="hero-body reveal">
+            <p>
+              A premium Nigerian engineering and infrastructure company delivering sustainable construction, civil
+              engineering, estate development, and infrastructure solutions with operational excellence.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-accent" href="https://wa.me/2348034073203">
+                <i data-lucide="message-square" aria-hidden="true"></i>
+                Get Quote
+              </a>
+              <a class="button button-ghost" href="#projects">
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                View Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div>
+            <span class="section-label reveal">Company Overview</span>
+            <h2 class="section-heading reveal" id="about-title">A Nigerian construction company with enterprise delivery discipline.</h2>
+          </div>
+          <div class="about-panel reveal">
+            <p class="about-lead">
+              B3 Construction was established to design, construct, commission, and maintain major building facilities in Nigeria.
+            </p>
+            <p>
+              The company has grown from focused housing delivery into a broader engineering practice, supported by in-house
+              expertise, continuous research, local project teams, controlled subcontractor networks, and a clear quality
+              assurance policy.
+            </p>
+            <p>
+              Its operating philosophy is centered on single-point project responsibility. Clients work through a defined
+              project manager who coordinates design, procurement, construction, safety, commissioning, and post-completion
+              support.
+            </p>
+          </div>
+        </div>
+
+        <div class="container principles reveal" style="margin-top: 52px">
+          <article class="principle">
+            <span class="icon-wrap"><i data-lucide="ruler" aria-hidden="true"></i></span>
+            <h3>Engineering Expertise</h3>
+            <p>Civil, mechanical, electrical, environmental, and structural coordination across built environments and infrastructure works.</p>
+          </article>
+          <article class="principle">
+            <span class="icon-wrap"><i data-lucide="clipboard-check" aria-hidden="true"></i></span>
+            <h3>Quality Assurance</h3>
+            <p>Controlled procedures for procurement, inspection, documentation, project reporting, and fit-for-purpose handover.</p>
+          </article>
+          <article class="principle">
+            <span class="icon-wrap"><i data-lucide="hard-hat" aria-hidden="true"></i></span>
+            <h3>Safety Commitment</h3>
+            <p>Risk assessments, safe working methods, public health consideration, and site induction embedded into project delivery.</p>
+          </article>
+          <article class="principle">
+            <span class="icon-wrap"><i data-lucide="handshake" aria-hidden="true"></i></span>
+            <h3>Client Continuity</h3>
+            <p>Post-completion technical support, O&M documentation, operational training, and maintenance advisory for delivered assets.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section featured" aria-labelledby="featured-title">
+        <div class="container">
+          <span class="section-label reveal">Featured Work</span>
+          <h2 class="section-heading reveal" id="featured-title">Residential and estate projects presented with calm confidence.</h2>
+          <p class="section-copy reveal">
+            The portfolio imagery shows completed residential assets across Lagos estate environments, combining architectural
+            delivery, exterior works, boundary systems, access planning, and property-facing infrastructure.
+          </p>
+
+          <div class="featured-grid">
+            <article class="featured-card reveal">
+              <img src="assets/project-02.jpeg" alt="Contemporary residential building with gated frontage and landscaped setback" width="1080" height="810" loading="lazy" decoding="async" />
+              <div class="featured-content">
+                <span class="project-tag">Estate Development</span>
+                <h3>Contemporary residential delivery with coordinated external works.</h3>
+                <p>Built environments planned around access, enclosure, services, and long-term property value.</p>
+              </div>
+            </article>
+            <article class="featured-card reveal">
+              <img src="assets/project-03.jpeg" alt="Residential twin property with pitched roof, gate, and planted frontage" width="1080" height="810" loading="lazy" decoding="async" />
+              <div class="featured-content">
+                <span class="project-tag">Residential</span>
+                <h3>Housing delivery for private and estate-scale requirements.</h3>
+              </div>
+            </article>
+            <article class="featured-card reveal">
+              <img src="assets/project-09.jpeg" alt="Corner residential property with perimeter walls and street interface" width="1080" height="810" loading="lazy" decoding="async" />
+              <div class="featured-content">
+                <span class="project-tag">Urban Works</span>
+                <h3>Site interfaces designed for access, safety, and durability.</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container services-head">
+          <div>
+            <span class="section-label reveal">Services</span>
+            <h2 class="section-heading reveal" id="services-title">Integrated capability across buildings, civil infrastructure, utilities, and estate operations.</h2>
+          </div>
+          <p class="section-copy reveal">
+            B3 combines site execution with planning, resource control, engineering coordination, and long-term maintenance thinking.
+          </p>
+        </div>
+
+        <div class="container services-grid">
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">01</span>
+              <h3>Housing & Building Construction</h3>
+              <p>Residential estates, apartment blocks, staff quarters, renovations, foundation works, and superstructure delivery.</p>
+            </div>
+            <footer><span>Building</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">02</span>
+              <h3>Civil Engineering & Structural Works</h3>
+              <p>Foundation works, retaining walls, earthworks, steel fabrication, industrial shells, and infrastructure management.</p>
+            </div>
+            <footer><span>Civil</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">03</span>
+              <h3>Estate Development</h3>
+              <p>Land planning, title coordination, master planning, drainage, utilities, plot demarcation, and allocation systems.</p>
+            </div>
+            <footer><span>Real Estate</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">04</span>
+              <h3>Road & Drainage Construction</h3>
+              <p>Laterite, asphalt, concrete paving, culverts, stormwater channels, gutters, flood mitigation, and rehabilitation.</p>
+            </div>
+            <footer><span>Infrastructure</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">05</span>
+              <h3>Dredging & Reclamation</h3>
+              <p>Mechanical and hydraulic dredging, shoreline works, reclamation, stockpile management, sand filling, and desilting.</p>
+            </div>
+            <footer><span>Land Works</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">06</span>
+              <h3>Electrification & Power Infrastructure</h3>
+              <p>Rural electrification, grid extension, transformers, street lighting, solar mini-grids, substations, and audits.</p>
+            </div>
+            <footer><span>Power</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">07</span>
+              <h3>Borehole & Water Supply Systems</h3>
+              <p>Industrial and community boreholes, reservoirs, water treatment, solar water schemes, and pipe reticulation.</p>
+            </div>
+            <footer><span>Water</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">08</span>
+              <h3>Facility Management</h3>
+              <p>Refurbishment, electrical and plumbing maintenance, landscaping, HVAC checks, facility audits, and upgrade plans.</p>
+            </div>
+            <footer><span>Maintenance</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">09</span>
+              <h3>Educational & Institutional Infrastructure</h3>
+              <p>Classrooms, lecture theatres, admin buildings, libraries, ICT centers, sanitation blocks, fencing, and rehabilitation.</p>
+            </div>
+            <footer><span>Institutions</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <span class="service-number">10</span>
+              <h3>Community Management Services</h3>
+              <p>Estate security, sanitation, lighting, utility coordination, green area maintenance, HOAs, and resident engagement.</p>
+            </div>
+            <footer><span>Operations</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="section why" aria-labelledby="why-title">
+        <div class="container why-layout">
+          <div>
+            <span class="section-label reveal">Why Choose B3</span>
+            <h2 class="section-heading reveal" id="why-title">The discipline of a major contractor, with the accountability of a focused project team.</h2>
+          </div>
+          <div class="why-list reveal">
+            <article class="why-row">
+              <h3>Single-point project responsibility</h3>
+              <p>Each scheme is coordinated through an identified project manager, reducing communication drift and improving control.</p>
+            </article>
+            <article class="why-row">
+              <h3>Local resource intelligence</h3>
+              <p>B3 prioritizes Nigerian personnel, suppliers, materials, and subcontractor networks while retaining access to specialist support where required.</p>
+            </article>
+            <article class="why-row">
+              <h3>Documented delivery control</h3>
+              <p>Project plans, procurement records, inspection documents, test certificates, delivery notes, and revisions are treated as controlled project assets.</p>
+            </article>
+            <article class="why-row">
+              <h3>Handover beyond construction</h3>
+              <p>Commissioning, O&M manuals, operational training, and post-completion support keep the final product functional after delivery.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="equipment" aria-labelledby="equipment-title">
+        <div class="container resource-board reveal">
+          <div class="resource-copy">
+            <span class="section-label">Equipment & Resources</span>
+            <h2 id="equipment-title">Owned resources for construction, water, earthworks, lifting, power, and site support.</h2>
+            <p>
+              The company profile lists 43 owned equipment and resource assets, giving B3 practical control over site
+              mobilization, construction activity, temporary works, and support logistics.
+            </p>
+            <a class="button button-accent" href="#contact">Discuss Project Resources</a>
+          </div>
+          <div class="equipment-list" aria-label="Selected owned equipment">
+            <div class="equipment-item"><span>HIAB 1617 Mercedes Benz</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Excavator Caterpillar 225DLC</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Dynapac Compactor</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Surface Paver</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Concrete and Cement Mixers</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Water Tankers and Pumps</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Forklift and Payloader</span><span>Owned</span></div>
+            <div class="equipment-item"><span>CAT and Perkins Generator Sets</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Welding and Pressure Test Machines</span><span>Owned</span></div>
+            <div class="equipment-item"><span>Office Containers and Storage Tanks</span><span>Owned</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container gallery-head">
+          <div>
+            <span class="section-label reveal">Projects</span>
+            <h2 class="section-heading reveal" id="projects-title">A focused visual archive of completed residential and estate works.</h2>
+          </div>
+          <div class="filter-bar reveal" aria-label="Project filters">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="featured">Featured</button>
+            <button class="filter-button" type="button" data-filter="residential">Residential</button>
+            <button class="filter-button" type="button" data-filter="estate">Estate Development</button>
+            <button class="filter-button" type="button" data-filter="urban">Urban Works</button>
+          </div>
+        </div>
+
+        <div class="container masonry reveal" data-gallery>
+          <button class="gallery-card" type="button" data-gallery-item data-category="featured estate" data-src="project-01.jpeg" data-title="Magodo GRA Residential Development" data-meta="Estate Development">
+            <img src="assets/project-01.jpeg" alt="Large residential building with pitched roof in Magodo GRA" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Estate Development</span><strong>Magodo GRA residential development</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="featured residential" data-src="project-02.jpeg" data-title="Contemporary Private Residence" data-meta="Residential">
+            <img src="assets/project-02.jpeg" alt="Contemporary private residential building with boundary gate" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Residential</span><strong>Contemporary private residence</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="residential estate" data-src="project-03.jpeg" data-title="Twin Residential Asset" data-meta="Residential Estate">
+            <img src="assets/project-03.jpeg" alt="Twin residential buildings with pitched roofs and gated entrance" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Residential Estate</span><strong>Twin residential asset</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="residential" data-src="project-04.jpeg" data-title="Private Housing Pair" data-meta="Residential">
+            <img src="assets/project-04.jpeg" alt="Pair of colorful residential houses with black access gate" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Residential</span><strong>Private housing pair</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="featured estate" data-src="project-05.jpeg" data-title="Gated Estate Residences" data-meta="Estate Development">
+            <img src="assets/project-05.jpeg" alt="Two gated estate residences with matching pitched roofs" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Estate Development</span><strong>Gated estate residences</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="urban residential" data-src="project-06.jpeg" data-title="Street-Facing Residential Works" data-meta="Urban Works">
+            <img src="assets/project-06.jpeg" alt="Residential building along an urban street with vehicles in foreground" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Urban Works</span><strong>Street-facing residential works</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="residential estate" data-src="project-07.jpeg" data-title="Perimeter and Building Delivery" data-meta="Residential Estate">
+            <img src="assets/project-07.jpeg" alt="Residential property with perimeter wall and pitched roof" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Residential Estate</span><strong>Perimeter and building delivery</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="featured residential" data-src="project-08.jpeg" data-title="Formal Gated Residence" data-meta="Residential">
+            <img src="assets/project-08.jpeg" alt="Formal gated residence with symmetrical frontage and landscaping" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Residential</span><strong>Formal gated residence</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="urban estate" data-src="project-09.jpeg" data-title="Corner-Site Estate Asset" data-meta="Urban Works">
+            <img src="assets/project-09.jpeg" alt="Corner-site residential estate asset with road edge and perimeter works" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Urban Works</span><strong>Corner-site estate asset</strong></span>
+          </button>
+          <button class="gallery-card" type="button" data-gallery-item data-category="estate residential" data-src="project-10.jpeg" data-title="Large Residential Block" data-meta="Estate Development">
+            <img src="assets/project-10.jpeg" alt="Large cream residential block with gated entrance and street frontage" width="1080" height="810" loading="lazy" decoding="async" />
+            <span class="gallery-caption"><span>Estate Development</span><strong>Large residential block</strong></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section hse" id="hse" aria-labelledby="hse-title">
+        <div class="container">
+          <span class="section-label reveal">HSE & Quality Assurance</span>
+          <h2 class="section-heading reveal" id="hse-title">Safety and quality are treated as project controls, not presentation language.</h2>
+          <p class="section-copy reveal">
+            B3's company profile emphasizes risk assessment, safe working methods, procurement documentation, inspection,
+            commissioning discipline, and public health consideration before, during, and after project delivery.
+          </p>
+
+          <div class="hse-grid">
+            <article class="hse-panel reveal">
+              <h3>Health, Safety and Environment</h3>
+              <p>
+                Project planning considers workers, operational personnel, surrounding communities, site hazards, access,
+                mobilization, signage, protective equipment, and safe demobilization.
+              </p>
+              <ul class="hse-points">
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Pre-award site visits inform early risk assessment and mobilization planning.</span></li>
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Site safety induction and orientation are conducted before workforce acceptance.</span></li>
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Final sites are left clean, safe, and fit for purpose after demobilization.</span></li>
+              </ul>
+            </article>
+            <article class="hse-panel reveal">
+              <h3>Quality Assurance and Control</h3>
+              <p>
+                B3 applies controlled documentation across procurement, project planning, inspection, supplier communication,
+                delivery records, drawings, and client reporting.
+              </p>
+              <ul class="hse-points">
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Supplier certificates, calibration documents, test records, and inspection documentation are requested where applicable.</span></li>
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Project schedules and revisions are treated as controlled documents.</span></li>
+                <li><i data-lucide="check-circle-2" aria-hidden="true"></i><span>Completion reports provide formal project closure and proof of fit-for-purpose delivery.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <span class="section-label reveal">Process</span>
+          <h2 class="section-heading reveal" id="process-title">A controlled path from feasibility to post-completion support.</h2>
+          <p class="section-copy reveal">
+            The delivery model is practical and procedural, built around early site intelligence, project execution planning,
+            resource control, commissioning, and operational support.
+          </p>
+
+          <div class="process-list">
+            <article class="process-step reveal">
+              <span class="step-index">01 / Pre-Award</span>
+              <h3>Site Investigation</h3>
+              <p>Review access, existing conditions, safety issues, technical constraints, mobilization needs, and feasibility factors.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-index">02 / Award</span>
+              <h3>Execution Plan</h3>
+              <p>Define scope, programme, project personnel, responsibilities, method statements, drawings, and control proposals.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-index">03 / Delivery</span>
+              <h3>Mobilization & Construction</h3>
+              <p>Coordinate personnel, equipment, materials, procurement, site offices, safety gear, inspections, and records.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-index">04 / Close-Out</span>
+              <h3>Commissioning & Support</h3>
+              <p>Train operational staff, demobilize safely, submit completion reports, and provide technical support after handover.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight cta-band" aria-labelledby="cta-title">
+        <div class="container cta-layout">
+          <div>
+            <h2 class="reveal" id="cta-title">Plan your next construction, estate, or infrastructure project with B3.</h2>
+            <p class="reveal">
+              Share your site location, project scope, schedule expectations, and resource concerns. B3 can help assess a practical delivery route.
+            </p>
+          </div>
+          <a class="button button-accent reveal" href="https://wa.me/2348034073203">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            Start on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div>
+            <span class="section-label reveal">Contact</span>
+            <h2 class="section-heading reveal" id="contact-title">Discuss a project with B3 Construction.</h2>
+            <p class="section-copy reveal">
+              Send a concise project brief and the form will prepare a WhatsApp message for direct follow-up.
+            </p>
+
+            <div class="contact-details reveal" style="margin-top: 36px">
+              <div class="detail-row">
+                <span class="detail-icon"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+                <div>
+                  <h3>Office Address</h3>
+                  <p>13, Oluyomi Osikoya Close, Magodo GRA, Phase II, Magodo, Lagos</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon"><i data-lucide="phone" aria-hidden="true"></i></span>
+                <div>
+                  <h3>Phone</h3>
+                  <a href="tel:+2348034073203">+2348034073203</a>
+                  <a href="tel:+2348054405800">+2348054405800</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card reveal">
+            <form class="contact-form" data-contact-form novalidate>
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone or WhatsApp number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="field">
+                <label for="service">Project type</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Housing & Building Construction</option>
+                  <option>Civil Engineering & Structural Works</option>
+                  <option>Estate Development</option>
+                  <option>Road & Drainage Construction</option>
+                  <option>Dredging & Reclamation</option>
+                  <option>Electrification & Power Infrastructure</option>
+                  <option>Borehole & Water Supply Systems</option>
+                  <option>Facility Management</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Project brief</label>
+                <textarea id="message" name="message" required placeholder="Location, scope, desired timeline, and any known site constraints"></textarea>
+              </div>
+              <p class="form-message" data-form-message aria-live="polite"></p>
+              <button class="button button-primary" type="submit">
+                <i data-lucide="send" aria-hidden="true"></i>
+                Send via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/company-logo.png" alt="B3 Construction Company Ltd logo" width="480" height="480" />
+          <p>
+            Premium Nigerian engineering and infrastructure company delivering construction, civil engineering, estate
+            development, facility operations, and post-completion support.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="#about">About</a>
+          <a href="#equipment">Equipment</a>
+          <a href="#hse">HSE & QA</a>
+          <a href="#process">Process</a>
+        </div>
+        <div class="footer-col">
+          <h3>Work</h3>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="https://wa.me/2348034073203">Request Quote</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>13, Oluyomi Osikoya Close, Magodo GRA, Phase II, Lagos</p>
+          <a href="tel:+2348034073203">+2348034073203</a>
+          <a href="tel:+2348054405800">+2348054405800</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> B3 Construction Company Ltd. All rights reserved.</span>
+        <span>Engineering. Infrastructure. Estate Development.</span>
+      </div>
+    </footer>
+
+    <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-labelledby="lightbox-heading" aria-hidden="true">
+      <div class="lightbox-shell">
+        <div class="lightbox-top">
+          <p class="lightbox-title" id="lightbox-heading">Project Gallery</p>
+          <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close project image">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="lightbox-main">
+          <button class="lightbox-nav prev" type="button" data-lightbox-prev aria-label="Previous project">
+            <i data-lucide="chevron-left" aria-hidden="true"></i>
+          </button>
+          <img class="lightbox-image" src="project-01.jpeg" alt="" data-lightbox-image />
+          <button class="lightbox-nav next" type="button" data-lightbox-next aria-label="Next project">
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="lightbox-meta">
+          <h3 data-lightbox-title>Project title</h3>
+          <p data-lightbox-meta>Project category</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const header = document.querySelector("[data-header]");
+        const navLinks = Array.from(document.querySelectorAll(".desktop-nav a"));
+        const menuOpen = document.querySelector("[data-menu-open]");
+        const drawer = document.querySelector("[data-drawer]");
+        const drawerLinks = Array.from(document.querySelectorAll("[data-drawer-link]"));
+        const menuCloseButtons = Array.from(document.querySelectorAll("[data-menu-close]"));
+        const sections = Array.from(document.querySelectorAll("main section[id]"));
+        const revealItems = Array.from(document.querySelectorAll(".reveal"));
+        const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+        const galleryItems = Array.from(document.querySelectorAll("[data-gallery-item]"));
+        const lightbox = document.querySelector("[data-lightbox]");
+        const lightboxImage = document.querySelector("[data-lightbox-image]");
+        const lightboxTitle = document.querySelector("[data-lightbox-title]");
+        const lightboxMeta = document.querySelector("[data-lightbox-meta]");
+        const lightboxClose = document.querySelector("[data-lightbox-close]");
+        const lightboxPrev = document.querySelector("[data-lightbox-prev]");
+        const lightboxNext = document.querySelector("[data-lightbox-next]");
+        const contactForm = document.querySelector("[data-contact-form]");
+        const formMessage = document.querySelector("[data-form-message]");
+        let activeGalleryItems = [...galleryItems];
+        let currentLightboxIndex = 0;
+        let lastFocusedElement = null;
+
+        const renderIcons = () => {
+          if (window.lucide) {
+            window.lucide.createIcons({
+              attrs: {
+                "stroke-width": 2,
+                width: 20,
+                height: 20
+              }
+            });
+          }
+        };
+
+        window.addEventListener("load", renderIcons);
+        document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+        const setHeaderState = () => {
+          header.classList.toggle("is-scrolled", window.scrollY > 24);
+        };
+
+        setHeaderState();
+        window.addEventListener("scroll", setHeaderState, { passive: true });
+
+        const openDrawer = () => {
+          drawer.classList.add("is-open");
+          drawer.setAttribute("aria-hidden", "false");
+          menuOpen.setAttribute("aria-expanded", "true");
+          document.body.classList.add("nav-open");
+          const firstLink = drawer.querySelector("a, button");
+          if (firstLink) firstLink.focus();
+        };
+
+        const closeDrawer = () => {
+          drawer.classList.remove("is-open");
+          drawer.setAttribute("aria-hidden", "true");
+          menuOpen.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("nav-open");
+          menuOpen.focus();
+        };
+
+        menuOpen.addEventListener("click", openDrawer);
+        menuCloseButtons.forEach((button) => button.addEventListener("click", closeDrawer));
+        drawerLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (drawer.classList.contains("is-open")) closeDrawer();
+          });
+        });
+
+        const activeObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+              });
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+        );
+
+        sections.forEach((section) => activeObserver.observe(section));
+
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.14 }
+          );
+          revealItems.forEach((item) => revealObserver.observe(item));
+        }
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+            filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+            galleryItems.forEach((item) => {
+              const categories = item.dataset.category.split(" ");
+              const isVisible = filter === "all" || categories.includes(filter);
+              item.hidden = !isVisible;
+            });
+            activeGalleryItems = galleryItems.filter((item) => !item.hidden);
+          });
+        });
+
+        const updateLightbox = () => {
+          const item = activeGalleryItems[currentLightboxIndex];
+          if (!item) return;
+          const img = item.querySelector("img");
+          lightboxImage.src = item.dataset.src;
+          lightboxImage.alt = img ? img.alt : item.dataset.title;
+          lightboxTitle.textContent = item.dataset.title;
+          lightboxMeta.textContent = item.dataset.meta;
+        };
+
+        const openLightbox = (item) => {
+          activeGalleryItems = galleryItems.filter((galleryItem) => !galleryItem.hidden);
+          currentLightboxIndex = Math.max(0, activeGalleryItems.indexOf(item));
+          lastFocusedElement = document.activeElement;
+          updateLightbox();
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+          lightboxClose.focus();
+        };
+
+        const closeLightbox = () => {
+          lightbox.classList.remove("is-open");
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("lightbox-open");
+          if (lastFocusedElement) lastFocusedElement.focus();
+        };
+
+        const showNext = () => {
+          currentLightboxIndex = (currentLightboxIndex + 1) % activeGalleryItems.length;
+          updateLightbox();
+        };
+
+        const showPrev = () => {
+          currentLightboxIndex = (currentLightboxIndex - 1 + activeGalleryItems.length) % activeGalleryItems.length;
+          updateLightbox();
+        };
+
+        galleryItems.forEach((item) => item.addEventListener("click", () => openLightbox(item)));
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightboxNext.addEventListener("click", showNext);
+        lightboxPrev.addEventListener("click", showPrev);
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            if (lightbox.classList.contains("is-open")) closeLightbox();
+            if (drawer.classList.contains("is-open")) closeDrawer();
+          }
+          if (!lightbox.classList.contains("is-open")) return;
+          if (event.key === "ArrowRight") showNext();
+          if (event.key === "ArrowLeft") showPrev();
+          if (event.key === "Tab") {
+            const focusable = Array.from(lightbox.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"));
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+              event.preventDefault();
+              last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+              event.preventDefault();
+              first.focus();
+            }
+          }
+        });
+
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          formMessage.classList.remove("is-error");
+          const formData = new FormData(contactForm);
+          const name = String(formData.get("name") || "").trim();
+          const phone = String(formData.get("phone") || "").trim();
+          const service = String(formData.get("service") || "").trim();
+          const message = String(formData.get("message") || "").trim();
+
+          if (!name || !phone || !service || !message) {
+            formMessage.textContent = "Please complete all fields before sending your inquiry.";
+            formMessage.classList.add("is-error");
+            return;
+          }
+
+          const whatsappMessage = [
+            "Hello B3 Construction Company Ltd,",
+            "",
+            `My name is ${name}.`,
+            `Phone: ${phone}`,
+            `Project type: ${service}`,
+            "",
+            `Project brief: ${message}`
+          ].join("\n");
+
+          formMessage.textContent = "Opening WhatsApp with your project brief.";
+          window.location.href = `https://wa.me/2348034073203?text=${encodeURIComponent(whatsappMessage)}`;
+        });
+      })();
+    </script>
+  </body>
+</html>
